@@ -12,3 +12,68 @@
   font-weight: 400; /* <weight>: Use a value from 400 to 900 */
   font-style: normal;
 }
+
+/* background image */
+body {
+  background-image: url('../images/backgrounds/background1440webp.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; /* Center the background image */
+  color: white; /* Change font color to white */
+}
+
+/* Temporary border to highlight container edges */
+.container {
+  border: 3px solid white;
+}
+
+.big-words {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* <weight>: Use a value from 400 to 900 */
+  font-style: normal;
+}
+
+/* Center align the title in the header */
+header .title {
+  text-align: center;
+}
+
+/* Style for the header title container */
+#quiz-title-box {
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  background-color: rgba(92, 92, 92, 0.9); /* Grey semi-transparent background */
+  border: 2px solid black; /* Solid black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the container */
+}
+
+/* Top level buttons */
+
+/* Style for the header buttons container */
+#header-buttons {
+  display: flex;
+  justify-content: space-around; /* Space the buttons evenly */
+  margin-top: 20px; /* Space above the buttons */
+}
+
+#header-buttons .btn {
+  flex: 1; /* Make buttons take equal space */
+  margin: 0 10px; /* Space between buttons */
+  padding-left: 25px; /* Increase left padding by 5px */
+  padding-right: 25px; /* Increase right padding by 5px */
+  background-color: white; /* Button background color */
+  color: black; /* Button text color */
+  border: 2px solid black; /* Solid black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+  border-radius: 0; /* Square corners */
+}
+
+/* Hover effect for buttons */
+#header-buttons .btn:hover {
+  background-color: rgba(92, 92, 92, 0.9); /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
