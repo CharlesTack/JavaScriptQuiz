@@ -77,3 +77,16 @@ header .title {
   background-color: rgba(92, 92, 92, 0.9); /* Change background color on hover */
   color: white; /* Change text color on hover */
 }
+
+/* Footer section */
+
+#footer {
+  /*text-align: center; /* Center align the text */
+  display: flex;
+  flex-direction: column;
+}
+
+#footer .links {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+}
