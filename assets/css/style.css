@@ -80,13 +80,15 @@ header .title {
 
 /* Footer section */
 
-#footer {
-  /*text-align: center; /* Center align the text */
-  display: flex;
-  flex-direction: column;
+.footer-links {
+  list-style-type: none;
+  padding: 0;
 }
 
-#footer .links {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
+.footer-links li {
+  margin: 10px 0;
+}
+
+.underlined-link {
+  text-decoration: none;
 }
