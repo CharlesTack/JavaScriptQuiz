@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 /* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 
 
 /* Font */
@@ -21,12 +26,18 @@ body {
   background-attachment: fixed;
   background-position: center; /* Center the background image */
   color: white; /* Change font color to white */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 /* Temporary border to highlight container edges */
-.container {
+/* .container {
   border: 3px solid white;
-}
+} */
 
 .big-words {
   font-family: "Orbitron", sans-serif;
@@ -35,20 +46,17 @@ body {
   font-style: normal;
 }
 
-/* Center align the title in the header */
-header .title {
-  text-align: center;
-}
-
 /* Style for the header title container */
 #quiz-title-box {
   width: 80%; /* Adjust the width as needed */
   margin: 0 auto; /* Center the container horizontally */
+  margin-top: 20px; /* Space above the container */
   background-color: rgba(92, 92, 92, 0.9); /* Grey semi-transparent background */
   border: 2px solid black; /* Solid black border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
   border-radius: 10px; /* Rounded corners */
   padding: 20px; /* Padding inside the container */
+  text-align: center;
 }
 
 /* Top level buttons */
@@ -78,7 +86,50 @@ header .title {
   color: white; /* Change text color on hover */
 }
 
+/* Question area */
+#question-area-title {
+  width: 60%; /* Adjust the width as needed */
+  margin: 20px auto; /* Center the container horizontally */
+  background-color: rgba(92, 92, 92, 0.9); /* Grey semi-transparent background */
+  border: 2px solid black; /* Solid black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 5px; /* Padding inside the container */
+  text-align: center
+}
+
+#qa-header-text {
+  margin: 0;
+}
+
+#question-area {
+  background-color: rgba(92, 92, 92, 0.9); /* Grey semi-transparent background */
+  border: 2px solid black; /* Solid black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+}
+
+/* Answer Area */
+#answer-area {
+  margin: 20px auto; /* Center the container horizontally */
+}
+
+/* Answer Area Buttons */
+.answer-buttons {
+  background-color: white; /* Button background color */
+  color: black; /* Button text color */
+  border: 2px solid black; /* Solid black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+  border-radius: 0; /* Square corners */
+  height: 60px; /* Adjust the height as needed */  
+}
+
 /* Footer section */
+
+footer {
+  background-color: #9fc5f8; /* pale blue background */
+  border: 2px solid black; /* Solid black border */
+  margin-top: auto; /* Push footer to the bottom */
+}
 
 .footer-links {
   list-style-type: none;
@@ -91,4 +142,22 @@ header .title {
 
 .underlined-link {
   text-decoration: none;
+  color: black;
+}
+
+/* Hover effect for links */
+.underlined-link :hover {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-links :hover{
+  list-style-type: none;
+  padding: 0;
+  color: white;
+}
+
+#copyright {
+  margin-top: 10px;
+  color: black;
 }
