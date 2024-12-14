@@ -34,6 +34,10 @@ main {
   flex: 1;
 }
 
+.title {
+  margin: 0px;
+}
+
 /* Temporary border to highlight container edges */
 /* .container {
   border: 3px solid white;
@@ -55,7 +59,7 @@ main {
   border: 2px solid black; /* Solid black border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
   border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Padding inside the container */
+  padding: 10px; /* Padding inside the container */
   text-align: center;
 }
 
@@ -102,15 +106,36 @@ main {
   margin: 0;
 }
 
+#question {
+  margin: 16px 0px 0px 0px; /* Space above the question */
+}
+
 #question-area {
   background-color: rgba(92, 92, 92, 0.9); /* Grey semi-transparent background */
   border: 2px solid black; /* Solid black border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+  border-radius: 10px; /* Rounded corners */
 }
 
 /* Answer Area */
 #answer-area {
   margin: 20px auto; /* Center the container horizontally */
+  background-color: rgba(92, 92, 92, 0.9); /* Grey semi-transparent background */
+  border: 2px solid black; /* Solid black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+}
+
+#answer-area-title {
+  width: 60%; /* Adjust the width as needed */
+  margin: 20px auto; /* Center the container horizontally */
+  background-color: rgba(92, 92, 92, 0.9); /* Grey semi-transparent background */
+  border: 2px solid black; /* Solid black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 5px; /* Padding inside the container */
+  text-align: center
 }
 
 /* Answer Area Buttons */
@@ -121,6 +146,27 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
   border-radius: 0; /* Square corners */
   height: 60px; /* Adjust the height as needed */  
+}
+
+/* Hover effect for Answer Area buttons */
+.answer-buttons .btn:hover {
+  background-color: rgba(92, 92, 92, 0.9); /* Change background color on hover */
+  color: white; /* Change text color on hover */
+  border: 2px solid black; /* Solid black border */
+}
+
+/* Score Area */
+#score-area {
+  background-color: rgba(92, 92, 92, 0.9); /* Grey semi-transparent background */
+  border: 2px solid black; /* Solid black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+  border-radius: 10px; /* Rounded corners */
+  padding: 0px 12px;
+}
+
+#score {
+  padding: 0px 12px;
+  margin: 16px 0px;
 }
 
 /* Footer section */
