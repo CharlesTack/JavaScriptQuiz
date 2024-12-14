@@ -102,6 +102,10 @@ main {
   margin: 0;
 }
 
+#question {
+  margin: 16px 0px 0px 0px; /* Space above the question */
+}
+
 #question-area {
   background-color: rgba(92, 92, 92, 0.9); /* Grey semi-transparent background */
   border: 2px solid black; /* Solid black border */
