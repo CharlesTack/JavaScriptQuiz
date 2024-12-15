@@ -24,8 +24,10 @@
             <h1 class="title">JavaScript Quiz</h1>
         </div>
         <div id="header-buttons">
-            <div id="Instructions-button">
-                <button class="btn btn-primary">Instructions</button>
+            <div id="instructions-button">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+                    Instructions
+                </button>
             </div>
             <div id="restart-button">
                 <button class="btn btn-primary">Restart Quiz</button>
@@ -33,6 +35,7 @@
         </div>
     </header>
 
+</button>
     <!-- main section -->
     <main>
         <!-- Question area container -->
@@ -41,10 +44,12 @@
         </div>
         <div id="question-area" class="container">
             <div id="question-number" class="container">
-                <h3 id="question" class="big-words">Question:<span id="num-of-num"> Num. of num</span></h3><!--To be added-->
+                <h3 id="question" class="big-words">Question:<span id="num-of-num"> Num. of num</span></h3>
+                <!--To be added-->
             </div>
             <div class="container">
-                <p id="question-text">Which method is used to convert an object into an array of its property names in JavaScript?</p> <!--Random question to added-->
+                <p id="question-text">Which method is used to convert an object into an array of its property names in
+                    JavaScript?</p> <!--Random question to added-->
             </div>
         </div>
 
@@ -75,10 +80,11 @@
                 </div>
             </div>
         </div>
-            <!--Score Area-->
-            <div id="score-area" class="container big-words">
-                <h3 class="title" id="score">Your Score: <span id="score-of-score">Num. of num</span></h3> <!--Score of to be added-->
-            </div>
+        <!--Score Area-->
+        <div id="score-area" class="container big-words">
+            <h3 class="title" id="score">Your Score: <span id="score-of-score">Num. of num</span></h3>
+            <!--Score of to be added-->
+        </div>
 
     </main>
 
@@ -102,6 +108,30 @@
     </footer>
 
 
+    <!-- Instructions Modal -->
+    <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 big-words" id="instructionsModalLabel">Instructions</h1>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>The quiz will automatically start and present you with the first of 10 questions</li>
+                <li>Select your answer and click Submit Answer</li>
+                <li>The quiz will tell you whether you're right or wrong via colour coded feedback</li>
+                <li>You can keep track of how far you are through the quiz using the question counter</li>
+                <li>Your score will be tracked in the score area</li>
+                <li>At the end of the quiz, you can restart the quiz to try again</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button id="instructions-close-button" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- JavaScript Script -->
     <script src="assets/javascript/script.js"></script>
     <!-- Bootstrap Script -->
@@ -110,6 +140,10 @@
         crossorigin="anonymous"></script>
     <!-- Font Awesome Script -->
     <script src="https://kit.fontawesome.com/17f6269fc0.js" crossorigin="anonymous"></script>
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
