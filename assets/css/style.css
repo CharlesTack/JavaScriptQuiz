@@ -253,3 +253,16 @@ footer {
   margin-top: 10px;
   color: black;
 }
+
+/* Media Queries */
+
+/* For screens larger than 2350px */
+/* This is to prevent the top level buttons from going too wide */
+@media (min-width: 2350px) {
+#header-buttons{
+      max-width: 2350px;
+      margin: 0 auto; /* Center the buttons horizontally */
+      margin-top: 10px; /* Space above the buttons */
+
+  }
+}
