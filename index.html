@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>JavaScript Quiz</title>
 </head>
-
 <body>
     <!-- header section -->
     <header>
@@ -30,15 +28,13 @@
                     Instructions
                 </button>
             </div>
-
-
+            <!--Start Button-->
             <!--Start Button-->
             <div id="start-button">
-                <button class="btn btn-primary">Start Quiz</button>
+                <button class="btn btn-primary" id="start-quiz-button">Start Quiz</button>
             </div>
         </div>
     </header>
-
     </button>
         <!-- main section -->
         <main>
@@ -57,7 +53,6 @@
             </div>
     
             
-
             <!--Answer Area-->
             <div id="answer-area-title" class="container big-words">
                 <h2 id="aa-header-text">Answer area</h2>
@@ -85,16 +80,12 @@
                     </div>
                 </div>
             </div>
-
-
         <!--Score Area-->
         <div id="score-area" class="container big-words">
             <h3 class="title" id="score">Your Score: <span id="score-of-score">Num. of num</span></h3>
             <!--Score of to be added-->
         </div>
-
     </main>
-
     <!-- footer section -->
     <footer class="container">
         <h3 id="copyright" class="big-words"><i class="fa-regular fa-copyright"></i> Coding CLAN</h3>
@@ -113,8 +104,6 @@
                     <i class="fa-brands fa-github"></i> Charles Github</a></li>
         </ul>
     </footer>
-
-
     <!-- Instructions Modal -->
     <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel"
         aria-hidden="true">
@@ -128,10 +117,11 @@
                         <li>The quiz will automatically start and present you with the first of 10 questions.</li>
                         <li>Select your answer and click Submit Answer.</li>
                         <li>The quiz will tell you whether you're right or wrong via colour coded feedback.</li>
-                        <li>Wait 3-5 seconds and the next question will be presented.</li>
+                        <li>Wait 1 second and the next question will be presented.</li>
                         <li>You can keep track of how far you are through the quiz using the question counter.</li>
                         <li>Your score will be tracked in the score area.</li>
-                        <li>At the end of the quiz, you can restart the quiz to try again.</li>
+                        <li>At the end of the quiz, you can restart the quiz by pressing the reset page button to try again.</li>
+                        <li>Click Start Quiz button to restart!</li>
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -141,7 +131,6 @@
             </div>
         </div>
     </div>
-
     <!-- JavaScript Script -->
     <script src="assets/javascript/script.js"></script>
     <!-- Bootstrap Script -->
@@ -155,5 +144,4 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>

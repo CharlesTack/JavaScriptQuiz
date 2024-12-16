@@ -66,14 +66,9 @@ main {
 /* Top level buttons */
 
 /* Style for the header buttons container */
-#header-buttons {
-  display: flex;
-  justify-content: space-around; /* Space the buttons evenly */
-  margin-top: 10px; /* Space above the buttons */
-}
+
 
 #header-buttons .btn {
-  flex: 1; /* Make buttons take equal space */
   margin: 0 10px; /* Space between buttons */
   padding-left: 25px; /* Increase left padding by 5px */
   padding-right: 25px; /* Increase right padding by 5px */
@@ -82,6 +77,16 @@ main {
   border: 2px solid black; /* Solid black border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
   border-radius: 0; /* Square corners */
+}
+
+#header-buttons {
+  display: flex;
+  justify-content: space-around; /* Space the buttons evenly */
+  margin-top: 10px; /* Space above the buttons */
+}
+
+#start-button {
+  width: auto;
 }
 
 /* Hover effect for buttons */
