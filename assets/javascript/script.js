@@ -165,7 +165,7 @@ const questions = [
             { text: 'myFunction()', correct: true },
             { text: 'run myFunction', correct: false },
             { text: 'execute myFunction', correct: false }
-            ]
+        ]
     },
     {
         question: "Which keyword declares a block-scoped variable?",
@@ -174,7 +174,7 @@ const questions = [
             { text: 'const', correct: false },
             { text: 'let', correct: true },
             { text: 'var', correct: false }
-            ]
+        ]
     },
     {
         question: 'What is the output of "2" + 2 in JavaScript?',
@@ -183,6 +183,6 @@ const questions = [
             { text: '4', correct: false },
             { text: 'NaN', correct: false },
             { text: 'Error', correct: false }
-            ]
+        ]
     },
 ];
