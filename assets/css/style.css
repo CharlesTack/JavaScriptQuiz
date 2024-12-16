@@ -167,6 +167,15 @@ main {
 }
 
 /* Answer Area Buttons */
+
+/* button correct and incorrect */
+.btn.correct {
+  background-color: rgb(2, 204, 92);
+}
+
+.btn.wrong {
+  background-color: red;
+}
 .answer-buttons {
   background-color: white; /* Button background color */
   color: black; /* Button text color */
