@@ -1,12 +1,12 @@
 //Variables
 const startButton = document.getElementById('start-button');
-const nextButton = document.getElementById('next-btn');
-const restartButton = document.getElementById('restart-btn');
-const questionContainerElement = document.getElementById('question-container');
-const questionElement = document.getElementById('question');
-const answerButtonsElement = document.getElementById('answer-buttons');
-const questionNumber = document.getElementById('questionno');
-const endScreenContainer = document.getElementById('end-screen');
+const nextButton = document.getElementById('submit-answer');
+//const restartButton = document.getElementById('restart-btn');
+const questionContainerElement = document.getElementById('question-area');
+const questionElement = document.getElementById('question-text');
+const answerButtonsElement = document.getElementById('answer-area');
+const questionNumber = document.getElementById('question-number');
+//const endScreenContainer = document.getElementById('end-screen');
 
 let shuffledQuestions, currentQuestionIndex;
 const maxNumberOfQuestions = 10;
@@ -23,7 +23,7 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
 });
-restartButton.addEventListener('click', restartGame);
+//restartButton.addEventListener('click', restartGame);
 
 //FUNCTIONS
 
@@ -80,11 +80,13 @@ function selectAnswer(e) {
 
 //End (results) screen 
 
+/*
 function goToEndScreen(){
     endScreenContainer.classList.remove('hide');
     correctAnswerTally.innerText = finalScoreCount;
     finalPercentageGrade.innerText = ((finalScoreCount/10)*100);
 }
+*/
 
 function setStatusClass(element, correct) {
     clearStatusClass(element);
@@ -101,7 +103,7 @@ function setStatusClass(element, correct) {
     }
 
 //Restart Game
-
+/*
     function restartGame(){
         endScreenContainer.classList.add('hide');
         questionNumber.innerText = 0;
@@ -112,6 +114,7 @@ function setStatusClass(element, correct) {
         nextButton.classList.add('hide');
         startGame();
     }
+*/
 
 
 
