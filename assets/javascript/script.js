@@ -1,7 +1,117 @@
+//Variables
+const startButton = document.getElementById('start-button');
+const nextButton = document.getElementById('next-btn');
+const restartButton = document.getElementById('restart-btn');
+const questionContainerElement = document.getElementById('question-container');
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
+const questionNumber = document.getElementById('questionno');
+const endScreenContainer = document.getElementById('end-screen');
 
+let shuffledQuestions, currentQuestionIndex;
+const maxNumberOfQuestions = 10;
+let currentQuestionNumberCount = 0;
+let finalScoreCount = 0;
+let finalScorePercentage = 0;
 
+let correctAnswerTally = document.getElementById('final-score');
+let finalPercentageGrade = document.getElementById('final-percentage');
 
+//Button event listeners
+startButton.addEventListener('click', startGame);
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++;
+    setNextQuestion();
+});
+restartButton.addEventListener('click', restartGame);
 
+//FUNCTIONS
+
+//Playing the game
+
+function startGame() {
+    startButton.classList.add('hide');
+    nextButton.classList.remove('hide');
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+    questionContainerElement.classList.remove('hide');
+    setNextQuestion();
+}
+
+function setNextQuestion() {
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
+}
+
+function showQuestion(question) {
+    currentQuestionNumberCount++;
+    questionNumber.innerText = currentQuestionNumberCount;
+    questionElement.innerText = question.question;
+    answerButtonsElement.textContent = '';
+    question.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn');
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+            button.addEventListener('click', selectAnswer);
+        answerButtonsElement.appendChild(button);
+        nextButton.disabled = true;
+    });
+}
+
+function selectAnswer(e) {
+    const selectedButton = e.target;
+    const correct = selectedButton.dataset.correct;
+    if (correct && correct!==undefined) {
+        finalScoreCount++;
+    }
+    
+    setStatusClass(document.body, correct);
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct);
+    });
+    if (maxNumberOfQuestions > currentQuestionIndex + 1) {
+        nextButton.disabled = false;
+    } else {
+        goToEndScreen();
+           }
+}
+
+//End (results) screen 
+
+function goToEndScreen(){
+    endScreenContainer.classList.remove('hide');
+    correctAnswerTally.innerText = finalScoreCount;
+    finalPercentageGrade.innerText = ((finalScoreCount/10)*100);
+}
+
+function setStatusClass(element, correct) {
+    clearStatusClass(element);
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+           }
+}
+    
+    function clearStatusClass(element) {
+        element.classList.remove('correct');
+        element.classList.remove('wrong');
+    }
+
+//Restart Game
+
+    function restartGame(){
+        endScreenContainer.classList.add('hide');
+        questionNumber.innerText = 0;
+        currentQuestionIndex = 0;
+        currentQuestionNumberCount = 0;
+        finalScoreCount = 0;
+        finalScorePercentage = 0;
+        nextButton.classList.add('hide');
+        startGame();
+    }
 
 
 
@@ -101,7 +211,7 @@ const questions = [
             ]
     },
     {
-        question: "What is the output of "2" + 2 in JavaScript?",
+        question: "What is the output of '2' + 2 in JavaScript?",
         answers: [
             { text: '22', correct: true },
             { text: '4', correct: false },
@@ -189,4 +299,6 @@ const questions = [
             { text: '**', correct: false },
             { text: '//', correct: true }
             ]
+            
     },
+]
