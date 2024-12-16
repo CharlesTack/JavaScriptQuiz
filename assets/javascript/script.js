@@ -90,7 +90,7 @@ function endQuiz() {
     questionContainerElement.innerHTML = `
         <h2>Quiz Complete</h2>
         <p>Your final score: ${finalScoreCount} / ${questions.length}</p>
-        <button class="btn btn-primary" onclick="location.reload()">Reset Page</button>
+        <button class="btn btn-light" onclick="location.reload()">Reset Page</button>
     `;
 }
 // Questions dataset
@@ -159,12 +159,30 @@ const questions = [
         ]
     },
     {
-        question: "What is the default value of a variable declared but not assigned?",
+        question: "How do you call a function named 'myFunction'?",
         answers: [
-            { text: 'null', correct: false },
-            { text: 'undefined', correct: true },
-            { text: '0', correct: false },
-            { text: 'empty', correct: false }
-        ]
-    }
+            { text: 'call myFunction', correct: false },
+            { text: 'myFunction()', correct: true },
+            { text: 'run myFunction', correct: false },
+            { text: 'execute myFunction', correct: false }
+            ]
+    },
+    {
+        question: "Which keyword declares a block-scoped variable?",
+        answers: [
+            { text: 'declare', correct: false },
+            { text: 'const', correct: false },
+            { text: 'let', correct: true },
+            { text: 'var', correct: false }
+            ]
+    },
+    {
+        question: 'What is the output of "2" + 2 in JavaScript?',
+        answers: [
+            { text: '22', correct: true },
+            { text: '4', correct: false },
+            { text: 'NaN', correct: false },
+            { text: 'Error', correct: false }
+            ]
+    },
 ];
